@@ -117,6 +117,18 @@ private No valorMaximo(No no) {
 }
 
 
+public void removerMinimo() {
+    this.raiz = removerMinimo(this.raiz);
+}
+
+private No removerMinimo(No no) {
+    if (no == null) return null;
+    if (no.getEsquerda() == null) {
+        return no.getDireta();
+    }
+    no.setEsquerda(removerMinimo(no.getEsquerda()));
+    return no;
+}
 
 
 
