@@ -39,7 +39,7 @@ public class Estrutura {
 
     private void preOrdem(No no){
         if (no != null) {
-            System.out.print(no.getValor());
+            System.out.print("\n"+no.getValor());
             preOrdem(no.getEsquerda());
             preOrdem(no.getDireta());
     }
