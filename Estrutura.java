@@ -130,9 +130,20 @@ private No removerMinimo(No no) {
     return no;
 }
 
+public int calcularAltura(){
+    return calcularAltura(this.raiz);
+}
 
+private int calcularAltura(No no) {
+    if (no == null) {
+        return -1; 
+}
 
+int alturaEsquerda = calcularAltura(no.getEsquerda());
+int alturaDireita = calcularAltura(no.getDireta());
+return 1 + Math.max(alturaEsquerda, alturaDireita);
 
+}
 
 }
 
